@@ -31,12 +31,12 @@ function isPalindrome(str: string) {
       lettersArr.push(char)
     }
   })
-  // return lettersArr.join('') === lettersArr.reverse().join('')
-  const reverseLetterArr = [];
-  for(let i = lettersArr.length - 1; i >= 0; i--) {
-    reverseLetterArr.push(lettersArr[i])
-  }
-  return lettersArr.join('') === reverseLetterArr.join('')
+  return lettersArr.join('') === lettersArr.reverse().join('')
+  // const reverseLetterArr = [];
+  // for(let i = lettersArr.length - 1; i >= 0; i--) {
+  //   reverseLetterArr.push(lettersArr[i])
+  // }
+  // return lettersArr.join('') === reverseLetterArr.join('')
 }
 
 // didn't completed
