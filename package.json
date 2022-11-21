@@ -1,0 +1,45 @@
+{
+  "name": "technosoft-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ikramhasib007/technosoft-test.git",
+  "author": "ikramhasib007 <ikramhasib007@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --exit-child --respawn src/index.ts",
+    "migrate": "npx prisma migrate dev",
+    "generate": "npx prisma generate",
+    "deploy": "npx prisma migrate deploy",
+    "db-push": "npx prisma db push",
+    "studio-dev": "npx prisma studio",
+    "postinstall": "graphql-codegen --config codegen.yml",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.13.12",
+    "@graphql-codegen/typescript": "^2.8.2",
+    "@graphql-codegen/typescript-resolvers": "^2.7.7",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/node": "^18.11.9",
+    "cross-env": "^7.0.3",
+    "prisma": "^4.6.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.5.5",
+    "@graphql-tools/load": "^7.7.7",
+    "@graphql-tools/load-files": "^6.6.1",
+    "@graphql-yoga/node": "^2.13.13",
+    "@paljs/plugins": "^5.0.2",
+    "@prisma/client": "^4.6.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "tsconfig-paths": "^4.1.0"
+  }
+}

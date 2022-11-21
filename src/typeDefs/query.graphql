@@ -1,0 +1,6 @@
+scalar Json
+
+type Query {
+  isPalindrome(string: String!): Boolean!
+  groupAnagrams(strs: [String!]!): Json
+}
