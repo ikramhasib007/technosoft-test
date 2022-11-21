@@ -39,14 +39,16 @@ function isPalindrome(str: string) {
   return lettersArr.join('') === reverseLetterArr.join('')
 }
 
+// didn't completed
+// It's a two sum algorithm related problems
 function getGroupAnagrams(strArr: string[]) {
   let pairs = [], hashtable = [];
   for(let i = 0; i < strArr.length; i++) {
     let currentStr = strArr[i];
     let counterStrArr = rearrangingLetter(currentStr);
     for(let j = 0; j < counterStrArr.length; j++) {
-      if(hashtable.indexOf(counterStrArr[i]) !== -1) {
-        pairs.push([currentStr, counterStrArr[i]])
+      if(hashtable.indexOf(counterStrArr[j]) !== -1) {
+        pairs.push([currentStr, counterStrArr[j]])
       }
     }
     hashtable.push(currentStr)
